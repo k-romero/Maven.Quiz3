@@ -6,8 +6,10 @@ package rocks.zipcode.io.quiz3.fundamentals;
  * @author leon on 09/12/2018.
  */
 public class PigLatinGenerator {
+    VowelUtils vowelUtils = new VowelUtils();
 
-    public String translate(String str) {
+
+    public  String translate(String str) {
         String[] sentence = str.split(" ");
         for (int i = 0; i < sentence.length; i++) {
             sentence[i] = translateIndividual(sentence[i]);

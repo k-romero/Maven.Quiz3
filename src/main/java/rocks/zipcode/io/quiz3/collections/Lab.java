@@ -24,9 +24,10 @@ public class Lab {
         if(labStatus == LabStatus.COMPLETED){
             this.labStatus = LabStatus.COMPLETED;
         } else if(labStatus == LabStatus.INCOMPLETE){
-//            this.labStatus = LabStatus.
+            this.labStatus = LabStatus.INCOMPLETE;
+        } else if(labStatus == LabStatus.PENDING){
+            this.labStatus = LabStatus.PENDING;
         }
-
     }
 
     public LabStatus getStatus() {
