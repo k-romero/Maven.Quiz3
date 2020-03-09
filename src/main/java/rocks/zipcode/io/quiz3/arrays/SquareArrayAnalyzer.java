@@ -25,7 +25,6 @@ public class SquareArrayAnalyzer {
             }
             else return true;
         }
-
         return null;
     }
 }

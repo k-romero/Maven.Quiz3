@@ -1,5 +1,7 @@
 package rocks.zipcode.io.quiz3.arrays;
 
+import rocks.zipcode.io.quiz3.fundamentals.StringUtils;
+
 /**
  * @author leon on 09/12/2018.
  */
@@ -9,15 +11,11 @@ public class WaveGenerator {
         int counter = counter(str);
         String[] result = new String[counter];
         String tempString = stringToWorkWith;
-
         int arrayCounter = 0;
         for (int j = 0; j < str.length(); j++) {
             if(Character.isLetter(tempString.charAt(j))){
-                char upperCase = Character.toUpperCase(tempString.charAt(j));
-                for (int i = 0; i < tempString.length(); i++) {
 
-                }
-                result[arrayCounter] = tempString;
+                result[arrayCounter] =  StringUtils.capitalizeNthCharacter(tempString,j);
                 arrayCounter++;
                 tempString = stringToWorkWith;
             }
