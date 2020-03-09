@@ -1,6 +1,9 @@
 package rocks.zipcode.io.quiz3.generics;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.function.Function;
+import java.util.stream.Stream;
 
 /**
  * @author leon on 09/12/2018.
@@ -44,6 +47,16 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType[] filter(Function<SomeType, Boolean> predicate) {
-        return null;
+        ArrayList<SomeType> result = new ArrayList<>();
+        for (SomeType t : array) {
+            if(predicate.apply(t)){
+                result.add(t);
+            }
+        }
+        SomeType[] returnResult = Arrays.copyOf(array,result.size());
+        for (int i = 0; i < result.size(); i++) {
+            returnResult[i] = result.get(i);
+        }
+        return returnResult;
     }
 }
