@@ -8,8 +8,7 @@ public class Lab {
     private String labName;
 
     public Lab() {
-        this(null);
-        this.labStatus = LabStatus.PENDING;
+     this(null);
     }
 
     public Lab(String labName) {
@@ -21,13 +20,7 @@ public class Lab {
     }
 
     public void setStatus(LabStatus labStatus) {
-        if(labStatus == LabStatus.COMPLETED){
-            this.labStatus = LabStatus.COMPLETED;
-        } else if(labStatus == LabStatus.INCOMPLETE){
-            this.labStatus = LabStatus.INCOMPLETE;
-        } else if(labStatus == LabStatus.PENDING){
-            this.labStatus = LabStatus.PENDING;
-        }
+       this.labStatus = labStatus;
     }
 
     public LabStatus getStatus() {
