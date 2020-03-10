@@ -56,18 +56,9 @@ public class Student {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < labs.size(); i++) {
-            if(i == labs.size()-1){
-                builder.append(labs.get(i).getName());
-                builder.append(" > ");
-                builder.append(labs.get(i).getStatus());
-            } else{
-                builder.append(labs.get(i).getName());
-                builder.append(" > ");
-                builder.append(labs.get(i).getStatus());
-                builder.append("\n");
-            }
+        for (Lab lab : labs) {
+            builder.append(lab.getName()).append(" > ").append(lab.getStatus()).append("\n");
         }
-        return builder.toString();
+        return builder.substring(0,builder.length()-1);
     }
 }

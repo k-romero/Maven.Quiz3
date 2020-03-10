@@ -22,7 +22,6 @@ public class VowelUtils {
                     return true;
                 }
             }
-            temp = "";
         }
         return false;
     }

@@ -14,7 +14,6 @@ public class WaveGenerator {
         int arrayCounter = 0;
         for (int j = 0; j < str.length(); j++) {
             if(Character.isLetter(tempString.charAt(j))){
-
                 result[arrayCounter] =  StringUtils.capitalizeNthCharacter(tempString,j);
                 arrayCounter++;
                 tempString = stringToWorkWith;
@@ -22,12 +21,6 @@ public class WaveGenerator {
         }
         return result;
     }
-
-
-
-
-
-
 
     public static String toLowerCase(String str){
         return str.toLowerCase();
